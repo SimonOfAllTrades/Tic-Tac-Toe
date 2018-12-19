@@ -1,0 +1,63 @@
+body {
+	background-color: #acae02;
+	text-align: center;
+}
+
+#title {
+	font-size: 50px;
+}
+
+.tiles {
+	background-color: white;
+	height: 100px;
+	width: 100px;
+	border: 5px solid black;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+#redTurn {
+	width: 200px;
+	height: 30px;
+	font-size: 30px;
+	padding: 5 5 5 5;
+	margin: 10 10 10 10;
+	border: 5px solid black;
+	border-radius: 10px;
+	background-color: red;
+	float: left;
+}
+
+#bluTurn {
+	width: 200px;
+	height: 30px;
+	font-size: 30px;
+	color: white;
+	padding: 5 5 5 5;
+	margin: 10 10 10 10;
+	border: 5px solid black;
+	border-radius: 10px;
+	background-color: blue;
+	float: right;
+}
+
+a {
+	width: 200px;
+	height: 30px;
+	font-size: 30px;
+	color: white;
+	padding: 5 5 5 5;
+	border: 5px solid black;
+	border-radius: 10px;
+	background-color: gray;
+	text-align: center;
+	text-decoration: none;
+}
+
+#computer {
+	height: 50px;
+	width: 300px;
+	border: 5px black solid;
+}
+
+	
