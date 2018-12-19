@@ -1,0 +1,154 @@
+<html>
+<head>
+	<link rel = "stylesheet" href = "TicTacToe(CSS).css">
+	<title>TF2 Tic Tac Toe</title>
+	<script>
+		var userTurn = 0
+		var gameOver = false
+		var computer = false
+		var movesToGo = 9
+		var board = 
+		[
+			"0",
+			"0","0","0",
+			"0","0","0",
+			"0","0","0"
+		];
+
+		function compPlay()
+		{
+			computer == 1
+		}
+		
+		function turn(y)
+		{
+			userTurn = y
+		}
+
+		function changeTile(x)
+		{
+			if (userTurn == 0)
+			{
+				if (board[x] == 0)
+				{
+					document.getElementById(x).style.backgroundColor = "red"
+					userTurn++
+					board[x] = "red"
+					movesToGo--
+				}
+//Corners
+				if (computer == 1)
+				{
+					if (board[x] == "red" && board[x] == board[1])
+					{
+						document.getElementById(3).style.backgroundColor = "blue"
+						userTurn--
+						board[3] = "red"
+						movesToGo--
+					}
+				}
+			}
+			else
+			{
+				if (board[x] == 0)
+				{
+					document.getElementById(x).style.backgroundColor = "blue"
+					userTurn--
+					board[x] = "blu"
+					movesToGo--
+				}
+			}
+//Red Wins
+			if (board[1] == "red" && board[2] == "red" && board[3] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+			else if (board[4] == "red" && board[5] == "red" && board[6] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+			else if (board[7] == "red" && board[8] == "red" && board[9] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+			else if (board[1] == "red" && board[4] == "red" && board[7] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+			else if (board[2] == "red" && board[5] == "red" && board[8] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+			else if (board[3] == "red" && board[6] == "red" && board[9] == "red")
+			{
+			window.alert("Red Wins!")
+			}
+			else if (board[1] == "red" && board[5] == "red" && board[9] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+			else if (board[3] == "red" && board[5] == "red" && board[7] == "red")
+			{
+				window.alert("Red Wins!")
+			}
+//Blu Wins
+			if (board[1] == "blu" && board[2] == "blu" && board[3] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[4] == "blu" && board[5] == "blu" && board[6] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[7] == "blu" && board[8] == "blu" && board[9] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[1] == "blu" && board[4] == "blu" && board[7] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[2] == "blu" && board[5] == "blu" && board[8] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[3] == "blu" && board[6] == "blu" && board[9] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[1] == "blu" && board[5] == "blu" && board[9] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+			else if (board[3] == "blu" && board[5] == "blu" && board[7] == "blu")
+			{
+				window.alert("Blu Wins!")
+			}
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<div id="title">Red or Blu</div>
+	<p>
+	<div ="computer" onclick=compPlay()>Play Against the Computer</div>
+	<div id = "theBoard">
+		<div id="1" class="tiles" onclick=changeTile("1")></div>
+		<div id="2" class="tiles" onclick=changeTile("2")></div>
+		<div id="3" class="tiles" onclick=changeTile("3")></div>
+		<br>
+		<div id="4" class="tiles" onclick=changeTile("4")></div>
+		<div id="5" class="tiles" onclick=changeTile("5")></div>
+		<div id="6" class="tiles" onclick=changeTile("6")></div>	
+		<br>
+		<div id="7" class="tiles" onclick=changeTile("7")></div>
+		<div id="8" class="tiles" onclick=changeTile("8")></div>
+		<div id="9" class="tiles" onclick=changeTile("9")></div>
+	</div>
+	<div id="redTurn" onclick=turn("0")>Red's Turn First</div>
+	<div id="bluTurn" onclick=turn("1")>Blu's Turn First</div>
+	<p>
+	<div id="reset"><a href="TicTacToe.html">Reset</a></div>
+</body>
+</html>
